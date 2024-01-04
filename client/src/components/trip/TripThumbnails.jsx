@@ -1,7 +1,9 @@
 function TripThumbnails({ thumbnailsSrc }) {
   const thumbnailImages = thumbnailsSrc.map((imgSrc, index) => (
-    <img src={imgSrc} className="thumbnails-img" key={index} />
+    <div className="trip-thumbnail-container" key={index}>
+      <img src={imgSrc} />
+    </div>
   ));
-  return <div className="trip-thumbnails-container">{thumbnailImages}</div>;
+  return <div className="trip-thumbnails">{thumbnailImages}</div>;
 }
 export default TripThumbnails;

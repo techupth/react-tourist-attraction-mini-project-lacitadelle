@@ -1,6 +1,14 @@
-function TripInfo({ children: thumbnails, title, description, sourceUrl }) {
+function TripInfo({
+  children: thumbnails,
+  title,
+  description,
+  sourceUrl,
+  tags,
+}) {
   const shortDescription = description.slice(0, 100);
-
+  const tagsSpan = tags.map((tag, index) => {
+    return <span className="trip-info-tag">{tag}</span>;
+  });
   return (
     <div className="trip-info">
       <h2 className="trip-info-title">{title}</h2>
@@ -8,6 +16,7 @@ function TripInfo({ children: thumbnails, title, description, sourceUrl }) {
       <p className="trip-info-article-link">
         <a href={sourceUrl}>อ่านต่อ</a>
       </p>
+      <p>หมวด {tagsSpan}</p>
       {thumbnails}
     </div>
   );

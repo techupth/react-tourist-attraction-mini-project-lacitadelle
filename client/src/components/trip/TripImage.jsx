@@ -1,7 +1,7 @@
 function TripImage({ children }) {
   return (
-    <div className="trip-image">
-      <img src={children} />
+    <div className="trip-image-container">
+      <img src={children} className="trip-image-element" />
     </div>
   );
 }
