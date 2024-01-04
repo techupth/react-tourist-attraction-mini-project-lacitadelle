@@ -44,7 +44,8 @@ function Search() {
         className="search-input"
         id="search-input"
         name="search-input"
-        placeholder="หาที่เที่ยวแล้วไปด้วยกัน"
+        placeholder="หาที่เที่ยวแล้วไปด้วยกัน..."
+        value={searchTerm}
         onChange={handleInputChange}
       ></input>
     </div>

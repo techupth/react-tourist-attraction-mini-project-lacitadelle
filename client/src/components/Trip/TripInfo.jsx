@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { SearchContext } from "../../App";
+
 function TripInfo({
   children: thumbnails,
   title,
@@ -5,9 +8,10 @@ function TripInfo({
   sourceUrl,
   tags,
 }) {
+  const {setSearchTerm} = useContext(SearchContext);
   const shortDescription = description.slice(0, 100);
   const tagsSpan = tags.map((tag, index) => {
-    return <span className="trip-info-tag">{tag}</span>;
+    return <span className="trip-info-tag" onClick={() => setSearchTerm(tag)}>{tag}</span>;
   });
   return (
     <div className="trip-info">

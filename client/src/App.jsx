@@ -40,6 +40,7 @@ function App() {
       }}
     >
       <div className="App">
+        <h1 className="app-title">เที่ยวไหนดี</h1>
         <Search />
         {tripsList}
       </div>
