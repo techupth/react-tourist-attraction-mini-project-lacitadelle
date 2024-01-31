@@ -1,0 +1,174 @@
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: #50aaed;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 50px;
+}
+
+.app-title {
+  color: #50aaed;
+  margin-bottom: 30px;
+}
+
+/* Search box */
+.search-box {
+  width: 50%;
+}
+
+.search-box-instruction {
+  display: block;
+}
+
+.search-box input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+  text-align: center;
+}
+
+.search-box input::placeholder {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Trip Component */
+
+.trip-container {
+  display: flex;
+  position: relative;
+  margin: 50px 30px;
+  width: 70%;
+  max-width: 1150px;
+}
+
+.trip-info {
+  padding-left: 30px;
+}
+
+.trip-info p {
+  margin-top: 5px;
+}
+
+.trip-info-tag {
+  padding: 0 5px;
+  color: #50aaed;
+  text-decoration: underline;
+}
+
+.trip-info-tag:hover {
+  cursor: pointer;
+}
+
+.trip-image-element {
+  width: 400px;
+  height: 250px;
+  border-radius: 5%;
+}
+
+/* Trip Thumbnails */
+
+.trip-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+}
+
+.trip-thumbnail-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+
+  margin-top: 20px;
+}
+
+.trip-thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+}
+
+/* Link Copier */
+.trip-link-copy {
+  border: 4px solid #50aaed;
+  border-radius: 50%;
+  color: #50aaed;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-link-copy:hover {
+  border-color: aquamarine;
+  color: aquamarine;
+  cursor: pointer;
+}
+
+/* selects the icon inside link copier */
+
+.trip-link-copy i {
+  display: inline-block;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 1100px) {
+  .trip-container {
+    flex-direction: column;
+    border: 2px solid lightskyblue;
+    border-radius: 2%;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+
+  .trip-link-copy {
+    display: none;
+  }
+
+  .trip-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trip-thumbnails {
+    align-self: center;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+  }
+
+  .trip-thumbnail-container {
+    width: 80px;
+    height: 80px;
+  }
+}
